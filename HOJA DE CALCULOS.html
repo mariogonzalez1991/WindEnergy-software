@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CALCULOS</title>
+<meta charset="UTF-8">
+<style>
+body {
+      background-color: #04B4AE;
+      font-family: 'arial';
+      text-align: center;
+      margin: 0;
+      padding: 0;  }
+h1 {
+    color: #d4ff00;
+    margin-top: 20px;}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+input {
+        padding: 5px;
+        margin-bottom: 10px;
+}
+
+select {
+        padding: 5px;
+        margin-top: 10px;
+       
+}
+
+button {
+        padding: 8px 15px;
+        margin-top: 10px;
+        background-color: #fff;
+        color: #04B4AE;
+        border: none;
+        cursor: pointer;
+}
+
+p {
+        text-align: justify;
+        line-height: 1.6;
+        margin-bottom: 20px; 
+        margin-left: 22px; 
+        margin-right: 24px; 
+        margin-top: 12px;
+        color: #ffffff;
+        }
+
+
+</style>
+</head>
+<body>
+    <div>
+    <h1>ENERGIA EOLICA</h1>
+
+    <p style="text-align: justify;">
+    En esta seccion podra realizar el calculo correspondiente de la potencia, energia y tiempo expresado en el planteamiento anterior. Para realizar los respectivos calculos llene los espacios con los datos correspondientes y seleccione la opcion a realizar:
+    </p>
+
+    <label for="A1">DENSIDAD:</label>
+    <input type="number" id="A1" placeholder="UNIDADES KG/m³"/>
+
+    <label for="A2">AREA:</label>
+    <input type="number" id="A2" placeholder="UNIDADES m²"/>
+
+    <label for="A3">VELOCIDAD:</label>
+    <input type="number" id="A3"placeholder="UNIDADES m/s" />
+
+    <label for="A4">TIEMPO:</label>
+    <input type="number" id="A4"placeholder="UNIDADES HORAS" />
+
+    <label for="SelectorDivisa">SELECCIONE EL CALCULO A HACER:</label>
+    <select id="SelectorDivisa">
+        <option value="POTENCIA">POTENCIA</option>
+        <option value="ENERGIA">ENERGIA</option>
+    </select>
+
+    <button onclick="convertir()">CALCULAR</button>
+    <p id="resultado"></p>
+    <br>
+    <br>
+    <p style="text-align: justify;">
+        En esta seccion podra calcular el area de seccion generado por la helices. Llene el espacio correspondiente con el radio en metros:
+    </p>
+
+    <label for="A5">RADIO:</label>
+    <input type="number" id="A5"placeholder="UNIDADES m²" />
+    <button onclick="calculoarea()">CALCULAR</button>
+    <p id="area"></p>
+
+    <p style="text-align: justify;">
+    En esta seccion podra calcular el tiempo nesesario para producir la cantidad de energia nesesaria para una casa o establecimiento basandose en la factura de luz. Porfavor ingrese la cantidad de energia nesesaria a producir:       
+   </p>
+   
+    <label for="A6">ENERGIA NECESARIA</label>
+    <input type="number" id="A6"placeholder="UNIDADES KILOVATIOS/HORA" />
+    <button onclick="tiempo2()">CALCULAR</button>
+    <p id="tiempo2"></p>
+
+    <script src="java.js"></script>
+
+</body>
+</html>
